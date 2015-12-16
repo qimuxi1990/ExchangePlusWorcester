@@ -1,0 +1,50 @@
+<div id="detailModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Detail </h4>
+			</div>
+			<div class="modal-body">
+				<dl>
+					<dt>Product Name</dt>
+					<dd>{{modal_product.name}}</dd>
+					<dt>Product Image</dt>
+					<dd><img class="img-thumbnail img-responsive" alt="{{modal_product.name}}" ng-src="{{modal_product.image}}"></dd>
+					<dt>Deal Price</dt>
+					<dd>{{modal_product.buyList[0].offering_price | currency}}</dd>
+				</dl>
+				<div class="inline-block">
+					<table class="table table-bordered table-modal">
+						<tr>
+							<td></td>
+							<td><h5>Seller Contact</h5></td>
+							<td><h5>Customer Contact</h5></td>
+						</tr>
+						<tr>
+							<td>Name</td>
+							<td>{{modal_seller.name}}</td>
+							<td>{{modal_buyer.name}}</td>
+						</tr>
+						<tr>
+							<td>Tel.</td>
+							<td>{{modal_seller.tel}}</td>
+							<td>{{modal_buyer.tel}}</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><a ng-href="mailto:{{modal_seller.email}}">{{modal_seller.email}}</a></td>
+							<td><a ng-href="mailto:{{modal_buyer.email}}">{{modal_buyer.email}}</a></td>
+						</tr>
+						<tr>
+							<td>Address</td>
+							<td><address>{{modal_seller.address}}</address></td>
+							<td><address>{{modal_buyer.address}}</address></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

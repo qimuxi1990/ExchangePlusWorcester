@@ -1,0 +1,36 @@
+<div class="panel row row-content" id="sell">
+	<div class="col-xs-12 col-sm-12 text-center">
+		<nav>
+			<ul class="pager">
+				<li class="previous" ng-class="{'disabled': startIndices['Sell'] < 4}">
+					<a href aria-label="Previous" ng-click="startIndices['Sell'] = (startIndices['Sell'] >= 4)? startIndices['Sell'] - 4 : startIndices['Sell']">
+						<span aria-hidden="true">&larr;</span> Previous
+					</a>
+				</li>
+				Page {{(startIndices['Sell']/4 + 1) | number : 0}}
+				<li class="next" ng-class="{'disabled': startIndices['Sell'] >= (user['sellList'].length - 4)}">
+					<a href aria-label="Next" ng-click="startIndices['Sell'] = (startIndices['Sell'] < user['sellList'].length - 4)? startIndices['Sell'] + 4 : startIndices['Sell']">
+						Next <span aria-hidden="true">&rarr;</span>
+					</a>
+				</li>
+				<li>
+					<button class="btn btn-link btn-sm" aria-label="Refresh" ng-class="{'disabled': user._id === null}" ng-click=" user._id != null && ctrl.loadSell()">
+						<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+					</button>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col-xs-6 col-sm-3" ng-repeat="sell_product in sell_products | orderBy : _id | limitTo: 4 : startIndices['Sell']">
+		<div class="thumbnail">
+			<img class="img-thumbnail img-responsive" alt="{{sell_product.name}}" ng-src="{{sell_product.image}}">
+			<div class="caption">
+				<b>{{sell_product.name | limitTo : 10}}</b>
+				<span class="label label-info label-xs">{{(sell_product.product_status == 'sold' ? sell_product.buyList[0].offering_price : sell_product.demanding_price) | currency}}</span>
+				<button class="btn btn-warning btn-xs" ng-show="sell_product.product_status === 'forSale'" ng-click="ctrl.setModal(sell_product,'#quoteModal')">forSale</button>
+				<button class="btn btn-success btn-xs" ng-show="sell_product.product_status === 'sold'" ng-click="ctrl.setModal(sell_product,'#detailModal')">sold</button>
+				<button class="btn btn-default btn-xs disabled" data-toggle="modal" ng-show="sell_product.product_status === 'deleted'">deleted</button>
+			</div>
+		</div>
+	</div>
+</div>

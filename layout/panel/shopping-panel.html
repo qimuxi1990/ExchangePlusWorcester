@@ -1,0 +1,58 @@
+<div class="panel row row-content" id="shopping">
+	<div class="col-xs-12 col-sm-12">
+		<form class="form-horizontal" ng-submit="ctrl.loadShopping(shop_filter)">
+			<div class="form-group">
+				<label for="keyword" class="hidden-xs col-sm-1 control-label">Keyword</label>
+				<div class="col-xs-8 col-sm-9">
+					<input type="text" class="form-control" id="keyword" placeholder="Keyword" ng-model="shop_filter.name">
+				</div>
+				<div class="col-xs-4 col-sm-2">
+					<input type="submit" class="btn btn-info" id="submit_search" value="Search">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="category" class="hidden-xs col-sm-1 control-label">Category</label>
+				<div class="col-xs-12 col-sm-11">
+					<input type="text" class="form-control" id="category" placeholder="Category" ng-model="shop_filter.category">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="lowerPrice" class="hidden-xs col-sm-1 control-label">Price</label>
+				<div class="col-xs-6 col-sm-5">
+					<input type="number" class="form-control" id="lowerPrice" step="0.01" placeholder="Lowest Price" ng-model="shop_filter_price.lower">
+				</div>
+				<label for="upperPrice" class="hidden-xs col-sm-1 control-label"> ~ </label>
+				<div class="col-xs-6 col-sm-5">
+					<input type="number" class="form-control" id="upperPrice" step="0.01" placeholder="Highest Price" ng-model="shop_filter_price.upper">
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="col-xs-12 col-sm-12 text-center">
+		<nav>
+			<ul class="pager">
+				<li class="previous" ng-class="{'disabled': startIndices['Shopping'] < 4}">
+					<a href aria-label="Previous" ng-click="startIndices['Shopping'] = (startIndices['Shopping'] >= 4)? startIndices['Shopping'] - 4 : startIndices['Shopping']">
+						<span aria-hidden="true">&larr;</span> Previous
+					</a>
+				</li>
+				Page {{(startIndices['Shopping']/4 + 1) | number : 0}}
+				<li class="next" ng-class="{'disabled': startIndices['Shopping'] >= shop_products.length - 4}">
+					<a href aria-label="Next" ng-click="startIndices['Shopping'] = (startIndices['Shopping'] < shop_products.length - 4)? startIndices['Shopping'] + 4 : startIndices['Shopping']">
+						Next <span aria-hidden="true">&rarr;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col-xs-6 col-sm-3" ng-repeat="product in shop_products | filter : shop_filter | price : shop_filter_price | notBought : user.buyList | limitTo : 4 : startIndices['Shopping']">
+		<div class="thumbnail">
+			<img class="img-thumbnail img-responsive" alt="{{product.name}}" ng-src="{{product.image}}" >
+			<div class="caption">
+				<b>{{product.name | limitTo : 8}}</b>
+				<span class="label label-info label-xs">{{product.demanding_price | currency}}</span>
+				<button class="btn btn-warning btn-xs" ng-click="ctrl.setModal(product,'#orderModal')">Purchase &raquo;</button>
+			</div>
+		</div>
+	</div>
+</div>

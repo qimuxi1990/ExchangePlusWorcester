@@ -1,0 +1,37 @@
+<!-- "globalController as ctrl" should be defined ahead -->
+<div id="postModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Post an Item </h4>
+			</div>
+			<div class="modal-body">
+				<form role="form-horizontal" ng-submit="ctrl.post()">
+					<div class="form-group"> 
+						<label for="postModal-title">Title</label> 
+						<input type="text" class="form-control input-sm" id="postModal-title" placeholder="Title" autofocus required ng-model="product_cache.name">    
+					</div>
+					<div class="form-group"> 
+						<label for="postModal-category">Category</label> 
+						<input type="text" class="form-control input-sm" id="postModal-category" placeholder="Category" ng-model="product_cache.category">    
+					</div>
+					<div class="form-group"> 
+						<label for="postModal-price">Price</label> 
+						<div class="input-group">
+							<span class="input-group-addon">$</span>
+							<input type="number" step="0.01" class="form-control input-sm" id="postModal-price" placeholder="Price" ng-model="product_cache.demanding_price">
+						</div>
+					</div>
+					<div class="form-group"> 
+						<label for="postModal-thumbnailUrl">Item Thumbnail Url</label> 
+						<input type="url" class="form-control input-sm" id="postModal-thumbnailUrl" ng-model="product_cache.image"> 
+					</div>
+					<button type="submit" class="btn btn-info btn-xs">Submit</button>
+					<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cancel</button>
+				</form> 
+			</div>
+		</div>
+	</div>
+</div>

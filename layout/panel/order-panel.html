@@ -1,0 +1,36 @@
+<div class="panel row row-content" id="order">
+	<div class="col-xs-12 col-sm-12 text-center">
+		<nav>
+			<ul class="pager">
+				<li class="previous" ng-class="{'disabled': startIndices['Order'] < 4}">
+					<a href aria-label="Previous" ng-click="startIndices['Order'] = (startIndices['Order'] >= 4)? startIndices['Order'] - 4 : startIndices['Order']">
+						<span aria-hidden="true">&larr;</span> Previous
+					</a>
+				</li>
+				Page {{(startIndices['Order']/4 + 1) | number : 0}}
+				<li class="next" ng-class="{'disabled': startIndices['Order'] >= user['buyList'].length - 4}">
+					<a href aria-label="Next" ng-click="startIndices['Order'] = (startIndices['Order'] < user['buyList'].length - 4)? startIndices['Order'] + 4 : startIndices['Order']">
+						Next <span aria-hidden="true">&rarr;</span>
+					</a>
+				</li>
+				<li>
+					<button class="btn btn-link btn-sm" aria-label="Refresh" ng-class="{'disabled': user._id === null}" ng-click=" user._id != null && ctrl.loadOrder()">
+						<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+					</button>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col-xs-6 col-sm-3" ng-repeat="buy_product in buy_products | orderBy : _id | limitTo: 4 : startIndices['Order']">
+		<div class="thumbnail">
+			<img class="img-thumbnail img-responsive" alt="{{buy_product.name}}" ng-src="{{buy_product.image}}">
+			<div class="caption">
+				<b>{{buy_product.name | limitTo : 10}}</b>
+				<span class="label label-info label-xs">{{buy_product.buyList[0].offering_price | currency}}</span>
+				<button class="btn btn-warning btn-xs" ng-show="buy_product.buyList[0].transaction_status === 'pending'" ng-click="ctrl.setModal(buy_product,'#orderModal')">pending</button>
+				<button class="btn btn-success btn-xs" ng-show="buy_product.buyList[0].transaction_status === 'complete'" ng-click="ctrl.setModal(buy_product,'#detailModal')">completed</button>
+				<button class="btn btn-default btn-xs disabled" ng-show="buy_product.buyList[0].transaction_status === 'closed'">closed</button>
+			</div>
+		</div>
+	</div>
+</div>
