@@ -1,0 +1,124 @@
+# of tries = 10
+the 0th time: time taken: 42.001485824584960938 ms
+the 1th time: time taken: 34.00135040283203125 ms
+the 2th time: time taken: 25.00152587890625 ms
+the 3th time: time taken: 41.000604629516601562 ms
+the 4th time: time taken: 32.000780105590820312 ms
+the 5th time: time taken: 27.00328826904296875 ms
+the 6th time: time taken: 28.001308441162109375 ms
+the 7th time: time taken: 31.001567840576171875 ms
+the 8th time: time taken: 33.002376556396484375 ms
+the 9th time: time taken: 28.001546859741210938 ms
+the average time taken: 32.101583480834960938 ms
+# of tries = 100
+the 0th time: time taken: 256.01649284362792969 ms
+the 1th time: time taken: 256.0100555419921875 ms
+the 2th time: time taken: 269.01459693908691406 ms
+the 3th time: time taken: 292.03009605407714844 ms
+the 4th time: time taken: 269.01483535766601562 ms
+the 5th time: time taken: 260.0116729736328125 ms
+the 6th time: time taken: 310.016632080078125 ms
+the 7th time: time taken: 261.01756095886230469 ms
+the 8th time: time taken: 267.0154571533203125 ms
+the 9th time: time taken: 253.01623344421386719 ms
+the average time taken: 269.31636333465576172 ms
+# of tries = 200
+the 0th time: time taken: 534.03258323669433594 ms
+the 1th time: time taken: 486.02223396301269531 ms
+the 2th time: time taken: 541.02492332458496094 ms
+the 3th time: time taken: 583.03165435791015625 ms
+the 4th time: time taken: 554.0180206298828125 ms
+the 5th time: time taken: 533.03241729736328125 ms
+the 6th time: time taken: 534.03162956237792969 ms
+the 7th time: time taken: 589.03360366821289062 ms
+the 8th time: time taken: 504.02355194091796875 ms
+the 9th time: time taken: 584.03730392456054688 ms
+the average time taken: 544.22879219055175781 ms
+# of tries = 500
+the 0th time: time taken: 1323.0788707733154297 ms
+the 1th time: time taken: 1340.0800228118896484 ms
+the 2th time: time taken: 1397.0844745635986328 ms
+the 3th time: time taken: 1448.0779170989990234 ms
+the 4th time: time taken: 1275.0833034515380859 ms
+the 5th time: time taken: 1281.0842990875244141 ms
+the 6th time: time taken: 1421.0677146911621094 ms
+the 7th time: time taken: 1245.0699806213378906 ms
+the 8th time: time taken: 1244.0817356109619141 ms
+the 9th time: time taken: 1230.0579547882080078 ms
+the average time taken: 1320.4766273498535156 ms
+# of tries = 1000
+the 0th time: time taken: 2879.1589736938476562 ms
+the 1th time: time taken: 3222.194671630859375 ms
+the 2th time: time taken: 3099.1644859313964844 ms
+the 3th time: time taken: 2746.1380958557128906 ms
+the 4th time: time taken: 2912.1766090393066406 ms
+the 5th time: time taken: 2986.1710071563720703 ms
+the 6th time: time taken: 2724.1520881652832031 ms
+the 7th time: time taken: 2725.147247314453125 ms
+the 8th time: time taken: 2646.1408138275146484 ms
+the 9th time: time taken: 2637.1464729309082031 ms
+the average time taken: 2857.7590465545654297 ms
+--------------------------------------------------
+# of tries = 2000
+the 0th time: time taken: 5621.3214397430419922 ms
+the 1th time: time taken: 5983.3064079284667969 ms
+the 2th time: time taken: 5453.3061981201171875 ms
+the 3th time: time taken: 5365.3283119201660156 ms
+the 4th time: time taken: 5160.2785587310791016 ms
+the 5th time: time taken: 5229.2537689208984375 ms
+the 6th time: time taken: 5285.3024005889892578 ms
+the 7th time: time taken: 5346.2870121002197266 ms
+the 8th time: time taken: 5326.31683349609375 ms
+the 9th time: time taken: 5371.3054656982421875 ms
+the average time taken: 5414.2006397247314453 ms
+# of tries = 4000
+the 0th time: time taken: 10541.634321212768555 ms
+the 1th time: time taken: 10427.569389343261719 ms
+the 2th time: time taken: 10665.57765007019043 ms
+the 3th time: time taken: 10589.595556259155273 ms
+the 4th time: time taken: 10283.626079559326172 ms
+the 5th time: time taken: 10440.574169158935547 ms
+the 6th time: time taken: 10501.610994338989258 ms
+the 7th time: time taken: 10681.646108627319336 ms
+the 8th time: time taken: 10922.616958618164062 ms
+the 9th time: time taken: 10422.65629768371582 ms
+the average time taken: 10547.710752487182617 ms
+--------------------------------------------------
+# of tries = 6000
+the 0th time: time taken: 15598.894596099853516 ms
+the 1th time: time taken: 15692.980051040649414 ms
+the 2th time: time taken: 15749.927759170532227 ms
+the 3th time: time taken: 15675.840616226196289 ms
+the 4th time: time taken: 15670.874834060668945 ms
+the 5th time: time taken: 15794.949769973754883 ms
+the 6th time: time taken: 15605.878353118896484 ms
+the 7th time: time taken: 15578.891992568969727 ms
+the 8th time: time taken: 17550.002336502075195 ms
+the 9th time: time taken: 15098.876237869262695 ms
+the average time taken: 15801.711654663085938 ms
+--------------------------------------------------
+# of tries = 8000
+the 0th time: time taken: 23998.362064361572266 ms
+the 1th time: time taken: 24577.38947868347168 ms
+the 2th time: time taken: 23905.38477897644043 ms
+the 3th time: time taken: 24713.446855545043945 ms
+the 4th time: time taken: 24603.391647338867188 ms
+the 5th time: time taken: 25400.421857833862305 ms
+the 6th time: time taken: 24490.412235260009766 ms
+the 7th time: time taken: 24235.443115234375 ms
+the 8th time: time taken: 24557.466506958007812 ms
+the 9th time: time taken: 24664.325237274169922 ms
+the average time taken: 24514.604377746582031 ms
+-------------------------------------------------
+# of tries = 10000
+the 0th time: time taken: 31285.799503326416016 ms
+the 1th time: time taken: 31668.842554092407227 ms
+the 2th time: time taken: 31536.777019500732422 ms
+the 3th time: time taken: 33261.904478073120117 ms
+the 4th time: time taken: 28765.634059906005859 ms
+the 5th time: time taken: 27420.631170272827148 ms
+the 6th time: time taken: 27739.550590515136719 ms
+the 7th time: time taken: 33467.915058135986328 ms
+the 8th time: time taken: 29490.739583969116211 ms
+the 9th time: time taken: 28870.690584182739258 ms
+the average time taken: 30350.84846019744873 ms
